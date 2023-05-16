@@ -6,7 +6,7 @@
 </head>
 <body>
     <div th:switch="${users}">
-        <h2 th:case="null">No users yet!</h2>
+        <h2 th:case="null">Join the organisational revolution</h2>
         <div th:case="*">
             <h2>Users</h2>
             <table>
@@ -24,13 +24,14 @@
                     <td th:text="${user.lastname}"></td>
                     <td th:text="${user.email}"></td>
                     <td th:text="${user.phoneNr}"></td>
+                    <td th:text="${user.password}"></td>
                     <td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
                     <td><a th:href="@{/delete/{id}(id=${user.id})}">Delete</a></td>
                 </tr>
                 </tbody>
             </table>
         </div>
-        <p><a href="/signup">Add a new user</a></p>
+        <p><a href="/signup">Sign up today </a>today!</p>
     </div>
 </body>
 </html>

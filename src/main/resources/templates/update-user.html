@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Update User</title>
 </head>
 <body>
 <form action="#"
@@ -15,12 +15,18 @@
   <label for="lastname">Lastname</label>
   <input type="text" th:field="*{lastname}" id="lastname" placeholder="Lastname">
   <span th:if="${#fields.hasErrors('Lastname')}" th:errors="*{lastname}"></span>
+  <label for="username">Username</label>
+  <input type="text" th:field="*{username}" id="username" placeholder="Username">
+  <span th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
   <label for="email">Email</label>
   <input type="text" th:field="*{email}" id="email" placeholder="Email">
   <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
   <label for="phoneNr">Phone</label>
   <input type="text" th:field="*{phoneNr}" id="phoneNr" placeholder="phoneNr">
   <span th:if="${#fields.hasErrors('phoneNr')}" th:errors="*{phoneNr}"></span>
+  <label for="password">Password</label>
+  <input type="text" th:field="*{password}" id="password" placeholder="password">
+  <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
   <input type="submit" value="Update User">
 </form>
 </body>

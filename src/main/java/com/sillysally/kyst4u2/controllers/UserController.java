@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.List;
+
 
 @Controller
 public class UserController {
@@ -26,6 +26,11 @@ public class UserController {
     @GetMapping("/signup")
     public String showSignUpForm(User user) {
         return "add-user";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
     }
 
     @PostMapping("/adduser")
@@ -70,6 +75,4 @@ public class UserController {
         userRepository.delete(user);
         return "redirect:/index";
     }
-
-
 }
